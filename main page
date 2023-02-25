@@ -3,3 +3,82 @@
 
 <h1 style="background-color:#881111; color: #FFFFFF;font-family:verdana; font-size:300%; text-align:center;">
 UMass Dining</h1>
+
+<!--DHALL USER-->
+<label for="cars" style="text-align: center; font-size: 20px;" >Choose a Dining Commons:</label><br>
+    <select name="Dining Halls" id="Dining Halls">
+        <option style = "font-size: 20px;" value="woo">Worcester</option>
+        <option style = "font-size: 20px;" value="berk">Berkshire</option>
+        <option style = "font-size: 20px;" value="frank">Franklin</option>
+        <option style = "font-size: 20px;" value="hamp">Hampshire</option>
+      </select><br><br>
+
+<!--DASHER AREA-->
+<label for="area" style="font-size: 20px;">Choose your domain:</label><br>
+<select id="area">
+    <optgroup label="Central">
+        <option>Baker</option>
+        <option>Brett</option>
+        <option>Brooks</option>
+        <option>Butterfield</option>
+        <option>Chadbourne</option>
+        <option>Gorman</option>
+        <option>Greenough</option>
+        <option>Van Meter</option>
+        <option>Wheeler</option>
+    </optgroup>
+    <optgroup label="CHCRC">
+        <option>Birch</option>
+        <option>Elm</option>
+        <option>Linden</option>
+        <option>Maple</option>
+        <option>Oak</option>
+        <option>Sycamore</option>
+    </optgroup>
+    <optgroup label="Northeast">
+        <option>Crabtree</option>
+        <option>Dwight</option>
+        <option>Hamlin</option>
+        <option>Johnson</option>
+        <option>Knowlton</option>
+        <option>Leach</option>
+        <option>Lewis</option>
+        <option>Mary Lyon</option>
+        <option>Thatcher</option>
+    </optgroup>
+    <optgroup label="North Apartments">
+        <option>A</option>
+        <option>B</option>
+        <option>C</option>
+        <option>D</option>
+    </optgroup>
+    <optgroup label="Orchard Hill">
+        <option>Dickinson</option>
+        <option>Field</option>
+        <option>Grayson</option>
+        <option>Webster</option>
+    </optgroup>
+    <optgroup label="Sylvan">
+        <option>Brown</option>
+        <option>Cashin</option>
+        <option>McNamara</option>
+    </optgroup>
+    <optgroup label="Southwest">
+        <option>Cance</option>
+        <option>Coolidge</option>
+        <option>Crampton</option>
+        <option>Emerson</option>
+        <option>James</option>
+        <option>John Adams</option>
+        <option>John Quincy Adams</option>
+        <option>Kennedy</option>
+        <option>MacKimmie</option>
+        <option>Melville</option>
+        <option>Moore</option>
+        <option>Patterson</option>
+        <option>Pierpont</option>
+        <option>Prince</option>
+        <option>Thoreau</option>
+        <option>Washington</option>
+    </optgroup> 
+</select>
