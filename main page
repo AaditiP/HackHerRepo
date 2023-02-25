@@ -3,3 +3,8 @@
 
 <h1 style="background-color:#881111; color: #FFFFFF;font-family:verdana; font-size:300%; text-align:center;">
 UMass Dining</h1>
+
+<div class="g-signin2" data-onsuccess="onSignIn"></div>
+
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+<meta name="google-signin-client_id" content="1036348192658-pt7m5hf8ecdgepoop90ji4o629l13gfm.apps.googleusercontent.com">
