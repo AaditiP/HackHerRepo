@@ -4,19 +4,21 @@
 <h1 style="background-color:#881111; color: #FFFFFF;font-family:verdana; font-size:300%; text-align:center;">
 UMass Dining</h1>
 
-<!--DHALL USER-->
-<label for="cars" style="text-align: center; font-size: 20px;" >Choose a Dining Commons:</label><br>
-    <select name="Dining Halls" id="Dining Halls">
-        <option style = "font-size: 20px;" value="woo">Worcester</option>
-        <option style = "font-size: 20px;" value="berk">Berkshire</option>
-        <option style = "font-size: 20px;" value="frank">Franklin</option>
-        <option style = "font-size: 20px;" value="hamp">Hampshire</option>
-      </select><br><br>
+<label for="cars" style="text-align: center; font-size: 20px;" >Place an Order!</label><br>
 
-<!--DASHER AREA-->
-<label for="area" style="font-size: 20px;">Choose your domain:</label><br>
-<select id="area">
-    <optgroup label="Central">
+<label for="resArea" style="font-size: 20px;">Choose your Residential Area:</label>
+<select id="resArea" onchange="resLoc(this);">
+    <option style = "font-size: 20px;" value="central">Central</option>
+    <option style = "font-size: 20px;" value="chcrc">CHCRC</option>
+    <option style = "font-size: 20px;" value="northeast">Northeast</option>
+    <option style = "font-size: 20px;" value="north">North Apartments</option>
+    <option style = "font-size: 20px;" value="ohill">Orchard Hill</option>
+    <option style = "font-size: 20px;" value="sylvan">Sylvan</option>
+    <option style = "font-size: 20px;" value="southwest">Southwest</option>
+</select>
+
+<div id="central" style="display: none;">
+    <select name="Central Areas" id="centralAreas">
         <option>Baker</option>
         <option>Brett</option>
         <option>Brooks</option>
@@ -26,16 +28,22 @@ UMass Dining</h1>
         <option>Greenough</option>
         <option>Van Meter</option>
         <option>Wheeler</option>
-    </optgroup>
-    <optgroup label="CHCRC">
+    </select>
+</div>
+
+<div id="chcrc" style="display: none;">
+    <select name="CHCRC Areas" id="chcrcAreas">
         <option>Birch</option>
         <option>Elm</option>
         <option>Linden</option>
         <option>Maple</option>
         <option>Oak</option>
         <option>Sycamore</option>
-    </optgroup>
-    <optgroup label="Northeast">
+    </select>
+</div>
+
+<div id="northeast" style="display: none;">
+    <select name="Northeast Areas" id="northeastAreas">
         <option>Crabtree</option>
         <option>Dwight</option>
         <option>Hamlin</option>
@@ -45,25 +53,37 @@ UMass Dining</h1>
         <option>Lewis</option>
         <option>Mary Lyon</option>
         <option>Thatcher</option>
-    </optgroup>
-    <optgroup label="North Apartments">
+    </select>
+</div>
+
+<div id="north" style="display: none;">
+    <select name="North Apartment Areas" id="northAreas">
         <option>A</option>
         <option>B</option>
         <option>C</option>
         <option>D</option>
-    </optgroup>
-    <optgroup label="Orchard Hill">
+    </select>
+</div>
+
+<div id="ohill" style="display: none;">
+    <select name="Orchard Hill Areas" id="ohillAreas">
         <option>Dickinson</option>
         <option>Field</option>
         <option>Grayson</option>
         <option>Webster</option>
-    </optgroup>
-    <optgroup label="Sylvan">
+    </select>
+</div>
+
+<div id="sylvan" style="display: none;">
+    <select name="Sylvan Areas" id="sylvanAreas">
         <option>Brown</option>
         <option>Cashin</option>
         <option>McNamara</option>
-    </optgroup>
-    <optgroup label="Southwest">
+    </select>
+</div>
+
+<div id="southwest" style="display: none;">
+    <select name="Southwest Areas" id="southwestAreas">
         <option>Cance</option>
         <option>Coolidge</option>
         <option>Crampton</option>
@@ -80,5 +100,125 @@ UMass Dining</h1>
         <option>Prince</option>
         <option>Thoreau</option>
         <option>Washington</option>
-    </optgroup> 
-</select>
+    </select>
+</div>
+
+
+<!--DHALL USER-->
+
+    <label for="cars" style="text-align: center; font-size: 20px;" >Choose a Dining Commons:</label><br>
+    <select name="Dining Halls" id="Dining Halls">
+        <option style = "font-size: 20px;" value="woo">Worcester</option>
+        <option style = "font-size: 20px;" value="frank">Franklin</option>
+        <option style = "font-size: 20px;" value="hamp">Hampshire</option>
+        <option style = "font-size: 20px;" value="berk">Berkshire</option>
+    </select><br><br>
+
+    <div id="woo" style="display: block;">
+        <img src="woomenu.png" alt="Worcester Menu">
+    </div>
+    <div id="frank" style="display: none;">
+        <img src="frankmenu.png" alt="Frank Menu">
+    </div>
+    <div id="hamp" style="display: none;">
+        <img src="hampmenu.jpg" alt="Hamp Menu">
+    </div>
+    <div id="berk" style="display: none;">
+        <img src="berkmenu.jpg" alt="Berk Menu">
+    </div>
+
+    
+<script>
+    function resLoc(that) {
+        if (that.value == "central") {
+            document.getElementById("central").style.display = "block";
+            document.getElementById("chcrc").style.display = "none";
+            document.getElementById("northeast").style.display = "none";
+            document.getElementById("north").style.display = "none";
+            document.getElementById("ohill").style.display = "none";
+            document.getElementById("sylvan").style.display = "none";
+            document.getElementById("southwest").style.display = "none";
+        } 
+        else if (that.value == "chcrc") {
+            document.getElementById("central").style.display = "none";
+            document.getElementById("chcrc").style.display = "block";
+            document.getElementById("northeast").style.display = "none";
+            document.getElementById("north").style.display = "none";
+            document.getElementById("ohill").style.display = "none";
+            document.getElementById("sylvan").style.display = "none";
+            document.getElementById("southwest").style.display = "none";
+        }
+        else if (that.value == "northeast") {
+            document.getElementById("central").style.display = "none";
+            document.getElementById("chcrc").style.display = "none";
+            document.getElementById("northeast").style.display = "block";
+            document.getElementById("north").style.display = "none";
+            document.getElementById("ohill").style.display = "none";
+            document.getElementById("sylvan").style.display = "none";
+            document.getElementById("southwest").style.display = "none";
+        }
+        else if (that.value == "north") {
+            document.getElementById("central").style.display = "none";
+            document.getElementById("chcrc").style.display = "none";
+            document.getElementById("northeast").style.display = "none";
+            document.getElementById("north").style.display = "block";
+            document.getElementById("ohill").style.display = "none";
+            document.getElementById("sylvan").style.display = "none";
+            document.getElementById("southwest").style.display = "none";
+        }
+        else if (that.value == "ohill") {
+            document.getElementById("central").style.display = "none";
+            document.getElementById("chcrc").style.display = "none";
+            document.getElementById("northeast").style.display = "none";
+            document.getElementById("north").style.display = "none";
+            document.getElementById("ohill").style.display = "block";
+            document.getElementById("sylvan").style.display = "none";
+            document.getElementById("southwest").style.display = "none";
+        }
+        else if (that.value == "sylvan") {
+            document.getElementById("central").style.display = "none";
+            document.getElementById("chcrc").style.display = "none";
+            document.getElementById("northeast").style.display = "none";
+            document.getElementById("north").style.display = "none";
+            document.getElementById("ohill").style.display = "none";
+            document.getElementById("sylvan").style.display = "block";
+            document.getElementById("southwest").style.display = "none";
+        }
+        else if (that.value == "southwest") {
+            document.getElementById("central").style.display = "none";
+            document.getElementById("chcrc").style.display = "none";
+            document.getElementById("northeast").style.display = "none";
+            document.getElementById("north").style.display = "none";
+            document.getElementById("ohill").style.display = "none";
+            document.getElementById("sylvan").style.display = "none";
+            document.getElementById("southwest").style.display = "block";
+        }
+    }
+    function menu(that) {
+        if (that.value == "woo") {
+            document.getElementById("woo").style.display = "block";
+            document.getElementById("frank").style.display = "none";
+            document.getElementById("hamp").style.display = "none";
+            document.getElementById("berk").style.display = "none";
+        }
+        if (that.value == "frank") {
+            document.getElementById("woo").style.display = "none";
+            document.getElementById("frank").style.display = "block";
+            document.getElementById("hamp").style.display = "none";
+            document.getElementById("berk").style.display = "none";
+        }
+        if (that.value == "hamp") {
+            document.getElementById("woo").style.display = "none";
+            document.getElementById("frank").style.display = "none";
+            document.getElementById("hamp").style.display = "block";
+            document.getElementById("berk").style.display = "none";
+        }
+        if (that.value == "berk") {
+            document.getElementById("woo").style.display = "none";
+            document.getElementById("frank").style.display = "none";
+            document.getElementById("hamp").style.display = "none";
+            document.getElementById("berk").style.display = "block";
+    }
+    }
+
+</script>
