@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<h1 style="background-color:#881111; color: #FFFFFF;font-family:verdana; font-size:300%; text-align:center;font-family: 'Open Sans',calibri,tahoma,geneva,sans-serif;">
+    Minute Meals</h1>
+
+    <style>
+        form{text-align: center;}
+    </style>
+
+<!--DASHER AREA-->
+<form>
+    <label for="cars" style="text-align: center; font-size: 20px;" >Where would you like to deliver?</label><br><br>
+        <select name="areas" id="Areas">
+            <option style = "font-size: 20px;" value="central">Central</option>
+            <option style = "font-size: 20px;" value="honors">CHCRC</option>
+            <option style = "font-size: 20px;" value="northeast">Northeast</option>
+            <option style = "font-size: 20px;" value="north">North Apartments</option>
+            <option style = "font-size: 20px;" value="ohill">Orchard Hill</option>
+            <option style = "font-size: 20px;" value="sylvan">Sylvan</option>
+            <option style = "font-size: 20px;" value="southwest">Southwest</option>
+            </select><br><br>
+            <input type="submit" value="Deliver!">
+        </form>  
+    
+
+</html>
