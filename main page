@@ -1,21 +1,40 @@
 <!DOCTYPE html>
 <html lang="en-US">
 
-<h1 style="background-color:#881111; color: #FFFFFF;font-family:verdana; font-size:300%; text-align:center;">
-UMass Dining</h1>
+<style>
+    form{text-align:center;}
+</style>
+
+<h1 style="background-color:#881111; color: #FFFFFF;font-family:verdana; font-size:300%; text-align:center;font-family: 'Open Sans',calibri,tahoma,geneva,sans-serif;">
+Minute Meals</h1>
 
 <!--DHALL USER-->
-<label for="cars" style="text-align: center; font-size: 20px;" >Choose a Dining Commons:</label><br>
-    <select name="Dining Halls" id="Dining Halls">
-        <option style = "font-size: 20px;" value="woo">Worcester</option>
-        <option style = "font-size: 20px;" value="berk">Berkshire</option>
-        <option style = "font-size: 20px;" value="frank">Franklin</option>
-        <option style = "font-size: 20px;" value="hamp">Hampshire</option>
+
+<form action="/user.php">
+<label for="food" style="text-align: center; font-size: 20px;" >Where do you want to order from?</label><br><br>
+    <select name="food_options" id="Food Options">
+        <optgroup label="Dining Commons (Grab 'N Go ONLY)">
+            <option style = "font-size: 20px;" value="berk">Berkshire</option>
+            <option style = "font-size: 20px;" value="frank">Franklin</option>
+            <option style = "font-size: 20px;" value="hamp">Hampshire</option>
+            <option style = "font-size: 20px;" value="woo">Worcester</option>
+        </optgroup>
+        <optgroup label="Blue Wall">
+            <option style = "font-size: 20px;" value="paciugo">Paciugo</option>
+            <option style = "font-size: 20px;" value="tavola">Tavola</option>
+            <option style = "font-size: 20px;" value="yum">Yum! Bakery</option>
+            <option style = "font-size: 20px;" value="greenfields">Green Fields</option>
+            <option style = "font-size: 20px;" value="tamales">Tamales</option>
+            <option style = "font-size: 20px;" value="wasabi">Wasabi</option>
+            <option style = "font-size: 20px;" value="deli">Deli Delish</option>
+            <option style = "font-size: 20px;" value="star_ginger">Star Ginger</option>
+            <option style = "font-size: 20px;" value="grill">The Grill</option>
+            <option style = "font-size: 20px;" value="chef_table">Chef's Table</option>
+        </optgroup>
       </select><br><br>
 
-<!--DASHER AREA-->
-<label for="area" style="font-size: 20px;">Choose your domain:</label><br>
-<select id="area">
+<label for="area" style="font-size: 20px;">Where do you want your food to be delivered to?</label><br><br>
+<select id="dorms", name="Dorms">
     <optgroup label="Central">
         <option>Baker</option>
         <option>Brett</option>
@@ -81,4 +100,8 @@ UMass Dining</h1>
         <option>Thoreau</option>
         <option>Washington</option>
     </optgroup> 
-</select>
+</select><br><br>
+<input type="submit" value="Order!">
+</form>
+<br><br>
+</html>
